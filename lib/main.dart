@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:syncfusion_flutter_core/core.dart';
 import 'package:intl/intl.dart';
 
 void main() {
-  // Register your license here
-  SyncfusionLicense.registerLicense('ADD YOUR LICENSE KEY HERE');
   return runApp(ChartApp());
 }
 
@@ -24,7 +21,7 @@ class ChartApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   // ignore: prefer_const_constructors_in_immutables
-  MyHomePage({Key key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
