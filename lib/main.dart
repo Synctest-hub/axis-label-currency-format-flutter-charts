@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:syncfusion_flutter_core/core.dart';
+
 import 'package:intl/intl.dart';
 
 void main() {
@@ -12,9 +12,7 @@ class ChartApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chart Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: MyHomePage(),
     );
   }
@@ -46,32 +44,28 @@ class _MyHomePageState extends State<MyHomePage> {
                   minimum: 1000000,
                   maximum: 2000000,
                   numberFormat: NumberFormat.compactCurrency(
-                    symbol: '',
-                    decimalDigits: 1
-                  ),
+                      symbol: '', decimalDigits: 1),
                   // *** For currency representation ***
-                  // numberFormat: NumberFormat.currency( 
+                  // numberFormat: NumberFormat.currency(
                   //   locale: 'en_In',
                   //   symbol: "₹"
                   // ),
                 ),
                 series: <ChartSeries<ChartData, String>>[
                   LineSeries<ChartData, String>(
-                      dataSource: <ChartData>[
-                        ChartData(1211000, 'Jan'),
-                        ChartData(1312000, 'Feb'),
-                        ChartData(1413000, 'Mar'),
-                        ChartData(1514000, 'Apr'),
-                        ChartData(1615000, 'May')
-                      ],
-                      xValueMapper: (ChartData sales, _) => sales.value2,
-                      yValueMapper: (ChartData sales, _) => sales.value1,
+                    dataSource: <ChartData>[
+                      ChartData(1211000, 'Jan'),
+                      ChartData(1312000, 'Feb'),
+                      ChartData(1413000, 'Mar'),
+                      ChartData(1514000, 'Apr'),
+                      ChartData(1615000, 'May')
+                    ],
+                    xValueMapper: (ChartData sales, _) => sales.value2,
+                    yValueMapper: (ChartData sales, _) => sales.value1,
                   )
-                ]
-            ),
+                ]),
           ),
-        )
-    );
+        ));
   }
 }
 
