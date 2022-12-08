@@ -1,4 +1,4 @@
-How to apply the currency format to the axis labels (SfCartesianChart)
+# How to apply the currency format to the axis labels (SfCartesianChart)
 
 Flutter Cartesian chart widget provides support for applying currency format to the numeric axis labels in various representations. This can be achieved using the numberFormat property of an axis. There are two types of methods that can be used to format the numeric axis labels in currency format such as
 
