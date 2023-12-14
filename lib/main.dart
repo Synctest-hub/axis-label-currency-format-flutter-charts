@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   //   symbol: "₹"
                   // ),
                 ),
-                series: <ChartSeries<ChartData, String>>[
+                series: <LineSeries<ChartData, String>>[
                   LineSeries<ChartData, String>(
                     dataSource: <ChartData>[
                       ChartData(1211000, 'Jan'),
